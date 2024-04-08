@@ -21,7 +21,7 @@ public class MessageController {
     @GetMapping("/message")
     public String getMethodName(HttpServletRequest request, HttpServletResponse response
                         , Model model, @RequestParam String lang) {
-        localeResolver.setLocale(request, response, new Locale(lang));        
+        // localeResolver.setLocale(request, response, new Locale(lang));        
         model.addAttribute("name", "CHOI");
 
         return "message";
